@@ -11177,7 +11177,7 @@ export const geoFeatures = {
       id: "SLB",
     },
     {
-      type: "Feature",
+      type: "Featur",
       properties: {
         name: "Sierra Leone",
       },

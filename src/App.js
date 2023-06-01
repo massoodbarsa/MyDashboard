@@ -5,10 +5,10 @@ function App() {
   const [theme, colorMode] = useMode();
   return (
     <ColorModeContext value={colorMode}>
-      <ThemeProvider>
+      <ThemeProvider theme={theme}>
         <CssBaseline />
         <div className="app">
-          <main className="content"></main>
+          <main className="content">Rideidddddd</main>
         </div>
         ;
       </ThemeProvider>

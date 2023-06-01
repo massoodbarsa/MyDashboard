@@ -4,7 +4,7 @@ import { ColorModeContext, useMode } from "./theme";
 function App() {
   const [theme, colorMode] = useMode();
   return (
-    <ColorModeContext value={colorMode}>
+    <ColorModeContext.Provider value={colorMode}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <div className="app">
@@ -12,7 +12,7 @@ function App() {
         </div>
         ;
       </ThemeProvider>
-    </ColorModeContext>
+    </ColorModeContext.Provider>
   );
 }
 

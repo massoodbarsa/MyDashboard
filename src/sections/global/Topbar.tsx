@@ -12,15 +12,26 @@ import { useMode } from "../context/theme/ThemeContext";
 
 const Topbar: FC = () => {
   const [theme, colorMode] = useMode();
+
+  const ColorPalette = theme.palette;
   return (
     <Box display="flex" justifyContent="space-between" p={2}>
       {/* SEARCH BAR */}
       <Box
         display="flex"
         borderRadius="3px"
-        bgcolor={theme.palette.primary.light}
+        border="1px solid"
+        borderColor={ColorPalette.primary.light}
       >
-        <InputBase sx={{ ml: 2, flex: 1 }} placeholder="Search" />
+        <InputBase
+          sx={{
+            ml: 2,
+            flex: 1,
+            bgcolor: ColorPalette.background.default,
+            color: ColorPalette.primary.main,
+          }}
+          placeholder="Search"
+        />
         <IconButton type="button" sx={{ p: 1 }}>
           <SearchIcon />
         </IconButton>

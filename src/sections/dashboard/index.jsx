@@ -32,8 +32,6 @@ const Dashboard = () => {
             <Microeconomy />
           </Grid>
         </Grid>
-
-        {/* </Box> */}
       </Grid>
     </Grid>
   );

@@ -1,11 +1,30 @@
-import { Box, Container, Grid } from "@mui/material";
+import { Grid } from "@mui/material";
 import Sidebar from "../global/Sidebar";
 import Technical from "./Technical";
-import FearAndGrid from "./FearAndGreed";
+import FearAndGreed from "./FearAndGreed";
 import WorldSituation from "./WorldSituation";
 import Microeconomy from "./Microeconomy";
+import { AppContext } from "../context/AppContext";
+import React, { useContext } from "react";
 
 const Dashboard = () => {
+  const { selectedComponent } = useContext(AppContext);
+
+  const renderComponent = () => {
+    switch (selectedComponent) {
+      case "Technical":
+        return <Technical />;
+      case "FearAndGreed":
+        return <FearAndGreed />;
+      case "WorldSituation":
+        return <WorldSituation />;
+      case "Microeconomy":
+        return <Microeconomy />;
+      default:
+        return <Technical />;
+    }
+  };
+
   return (
     <Grid Grid container spacing={2} sx={{ height: "100%", p: 2 }}>
       <Grid item xs={12} sm={2}>
@@ -18,7 +37,8 @@ const Dashboard = () => {
         sm={10}
         sx={{ backgroundColor: "red", height: "100%" }}
       >
-        <Grid container spacing={3} p={1}>
+        {renderComponent()}
+        {/* <Grid container spacing={3} p={1}>
           <Grid item xs={12} sm={3}>
             <Technical />
           </Grid>
@@ -31,7 +51,7 @@ const Dashboard = () => {
           <Grid item xs={12} sm={3}>
             <Microeconomy />
           </Grid>
-        </Grid>
+        </Grid> */}
       </Grid>
     </Grid>
   );

@@ -1,17 +1,17 @@
 {
   "compilerOptions": {
-    "target": "es6",
-    "lib": ["dom", "es6"],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "react"
+    "target": "es6", // or another target version
+    "module": "commonjs", // or "es6", "esnext"
+    "jsx": "react", // This tells TypeScript to understand JSX
+    "strict": true, // Enable strict type-checking options
+    "esModuleInterop": true, // Enables compatibility with CommonJS modules
+    "skipLibCheck": true, // Skips type checking of declaration files
+    "forceConsistentCasingInFileNames": true // Ensures consistent file naming
   },
-  "include": ["src"],
-  "exclude": ["node_modules", "build"]
+  "include": [
+    "src" // Include all files in the src folder
+  ],
+  "exclude": [
+    "node_modules" // Exclude node_modules folder
+  ]
 }

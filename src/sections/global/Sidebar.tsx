@@ -1,5 +1,5 @@
-import React, { useContext } from "react";
-import { AppContext } from "../context/AppContext";
+import React, { FC, useContext } from "react";
+import { AppContext } from "../context/app/AppContext";
 
 import {
   List,
@@ -13,8 +13,14 @@ import SentimentVeryDissatisfiedIcon from "@mui/icons-material/SentimentVeryDiss
 import PublicIcon from "@mui/icons-material/Public";
 import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
 
-function Sidebar() {
-  const { setSelectedComponent } = useContext(AppContext);
+const Sidebar: FC = () => {
+  const context = useContext(AppContext);
+
+  if (!context) {
+    throw new Error("useAppContext must be used within an AppProvider");
+  }
+
+  const { setSelectedComponent } = context;
 
   return (
     <div>
@@ -64,6 +70,6 @@ function Sidebar() {
       </List>
     </div>
   );
-}
+};
 
 export default Sidebar;

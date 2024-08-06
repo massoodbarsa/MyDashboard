@@ -1,9 +1,8 @@
-import React, { createContext, useState, FC } from "react";
+import React, { createContext, useState, ReactNode, FC } from "react";
+import { AppContextState } from "../../types/AppCotextType";
 
-import { AppContextState } from "./AppCotextType";
-
-export const AppContext =
-  (createContext < AppContextState) | (undefined > undefined);
+// Create the context with a default value of undefined
+export const AppContext = createContext<AppContextState | undefined>(undefined);
 
 interface AppProviderProps {
   children: ReactNode;
@@ -11,7 +10,7 @@ interface AppProviderProps {
 
 export const AppProvider: FC<AppProviderProps> = ({ children }) => {
   const [selectedComponent, setSelectedComponent] =
-    useState < string > "Technical";
+    useState<string>("Technical");
 
   return (
     <AppContext.Provider value={{ selectedComponent, setSelectedComponent }}>

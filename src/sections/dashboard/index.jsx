@@ -10,6 +10,8 @@ import React, { useContext } from "react";
 const Dashboard = () => {
   const { selectedComponent } = useContext(AppContext);
 
+  console.log(selectedComponent);
+
   const renderComponent = () => {
     switch (selectedComponent) {
       case "Technical":

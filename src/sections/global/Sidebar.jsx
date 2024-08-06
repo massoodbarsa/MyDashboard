@@ -16,7 +16,6 @@ import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
 function Sidebar() {
   const { setSelectedComponent } = useContext(AppContext);
 
-  console.log(setSelectedComponent);
   return (
     <div>
       <List

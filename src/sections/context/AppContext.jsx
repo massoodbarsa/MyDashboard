@@ -1,10 +1,17 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useState, FC } from "react";
 
-export const AppContext = createContext();
+import { AppContextState } from "./AppCotextType";
 
-export const AppProvider = ({ children }) => {
+export const AppContext =
+  (createContext < AppContextState) | (undefined > undefined);
+
+interface AppProviderProps {
+  children: ReactNode;
+}
+
+export const AppProvider: FC<AppProviderProps> = ({ children }) => {
   const [selectedComponent, setSelectedComponent] =
-    useState < String >> "Technical";
+    useState < string > "Technical";
 
   return (
     <AppContext.Provider value={{ selectedComponent, setSelectedComponent }}>

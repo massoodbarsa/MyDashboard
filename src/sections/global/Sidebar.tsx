@@ -1,13 +1,7 @@
 import React, { FC, useContext } from "react";
 import { AppContext } from "../context/app/AppContext";
 
-import {
-  List,
-  ListItem,
-  ListItemIcon,
-  ListItemText,
-  Divider,
-} from "@mui/material";
+import { List, ListItem, ListItemIcon, ListItemText } from "@mui/material";
 import ShowChartIcon from "@mui/icons-material/ShowChart";
 import SentimentVeryDissatisfiedIcon from "@mui/icons-material/SentimentVeryDissatisfied";
 import PublicIcon from "@mui/icons-material/Public";

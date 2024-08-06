@@ -21,30 +21,42 @@ function Sidebar() {
     <div>
       <List
         component="nav"
-        sx={{ display: "flex", flexDirection: "column", gap: 2 }}
+        sx={{ display: "flex", flexDirection: "column", p: 1 }}
       >
         <ListItem button onClick={() => setSelectedComponent("Technical")}>
-          <ListItemIcon>
+          <ListItemIcon sx={{ py: 1 }}>
             <ShowChartIcon />
           </ListItemIcon>
           <ListItemText primary="Technical Analysis" />
         </ListItem>
-        <Divider />
-        <ListItem button onClick={() => setSelectedComponent("FearAndGreed")}>
+        {/* <Divider /> */}
+        <ListItem
+          button
+          onClick={() => setSelectedComponent("FearAndGreed")}
+          sx={{ py: 1 }}
+        >
           <ListItemIcon>
             <SentimentVeryDissatisfiedIcon />
           </ListItemIcon>
           <ListItemText primary="Fear & Greed Index" />
         </ListItem>
-        <Divider />
-        <ListItem button onClick={() => setSelectedComponent("WorldSituation")}>
+        {/* <Divider /> */}
+        <ListItem
+          button
+          onClick={() => setSelectedComponent("WorldSituation")}
+          sx={{ py: 1 }}
+        >
           <ListItemIcon>
             <PublicIcon />
           </ListItemIcon>
           <ListItemText primary="World Situation" />
         </ListItem>
-        <Divider />
-        <ListItem button onClick={() => setSelectedComponent("Microeconomy")}>
+        {/* <Divider /> */}
+        <ListItem
+          button
+          onClick={() => setSelectedComponent("Microeconomy")}
+          sx={{ py: 1 }}
+        >
           <ListItemIcon>
             <AttachMoneyIcon />
           </ListItemIcon>

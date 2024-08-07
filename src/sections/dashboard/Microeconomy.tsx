@@ -1,8 +1,8 @@
-import React from "react";
+import React, { FC } from "react";
 import { Card, CardContent, Typography } from "@mui/material";
 import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
 
-function Microeconomy() {
+const Microeconomy: FC = () => {
   return (
     <Card>
       <CardContent>
@@ -16,6 +16,6 @@ function Microeconomy() {
       </CardContent>
     </Card>
   );
-}
+};
 
 export default Microeconomy;

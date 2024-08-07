@@ -1,8 +1,8 @@
-import React from "react";
+import React, { FC } from "react";
 import { Card, CardContent, Typography } from "@mui/material";
 import SentimentVeryDissatisfiedIcon from "@mui/icons-material/SentimentVeryDissatisfied";
 
-function FearAndGreed() {
+const Psychology: FC = () => {
   return (
     <Card>
       <CardContent>
@@ -16,6 +16,6 @@ function FearAndGreed() {
       </CardContent>
     </Card>
   );
-}
+};
 
-export default FearAndGreed;
+export default Psychology;

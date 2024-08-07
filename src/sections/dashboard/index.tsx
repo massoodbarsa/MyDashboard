@@ -1,7 +1,7 @@
 import { Grid } from "@mui/material";
 import Sidebar from "../global/Sidebar";
 import Technical from "./Technical";
-import FearAndGreed from "./FearAndGreed";
+import Psychology from "./Phychology";
 import WorldSituation from "./WorldSituation";
 import Microeconomy from "./Microeconomy";
 import { AppContext } from "../context/app/AppContext";
@@ -20,8 +20,8 @@ const Dashboard: FC = () => {
     switch (selectedComponent) {
       case "Technical":
         return <Technical />;
-      case "FearAndGreed":
-        return <FearAndGreed />;
+      case "Psychology":
+        return <Psychology />;
       case "WorldSituation":
         return <WorldSituation />;
       case "Microeconomy":

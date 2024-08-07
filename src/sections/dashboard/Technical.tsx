@@ -1,8 +1,10 @@
-import React from "react";
+import React, { FC } from "react";
 import { Card, CardContent, Typography } from "@mui/material";
 import ShowChartIcon from "@mui/icons-material/ShowChart";
 
-function Technical() {
+// type Props = { name: string };
+
+const Technical: FC = () => {
   return (
     <Card>
       <CardContent>
@@ -16,6 +18,6 @@ function Technical() {
       </CardContent>
     </Card>
   );
-}
+};
 
 export default Technical;

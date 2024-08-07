@@ -1,8 +1,13 @@
-import React from "react";
+import React, { FC } from "react";
 import { Card, CardContent, Typography } from "@mui/material";
 import PublicIcon from "@mui/icons-material/Public";
 
-function WorldSituation() {
+interface TopbarProps {
+  // title: string;
+  // isLoggedIn: boolean;
+}
+
+const WorldSituation: FC = () => {
   return (
     <Card>
       <CardContent>
@@ -16,6 +21,6 @@ function WorldSituation() {
       </CardContent>
     </Card>
   );
-}
+};
 
 export default WorldSituation;

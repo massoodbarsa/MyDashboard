@@ -3,7 +3,8 @@ import { AppContext } from "../context/app/AppContext";
 
 import { List, ListItem, ListItemIcon, ListItemText } from "@mui/material";
 import ShowChartIcon from "@mui/icons-material/ShowChart";
-import SentimentVeryDissatisfiedIcon from "@mui/icons-material/SentimentVeryDissatisfied";
+import PsychologyIcon from "@mui/icons-material/Psychology";
+import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
 import PublicIcon from "@mui/icons-material/Public";
 import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
 import { FinancialTypes } from "../enums/Enums";
@@ -25,6 +26,16 @@ const Sidebar: FC = () => {
       >
         <ListItem
           button
+          onClick={() => setSelectedComponent(FinancialTypes.MACROECONOMY)}
+          sx={{ py: 1 }}
+        >
+          <ListItemIcon>
+            <AccountBalanceIcon />
+          </ListItemIcon>
+          <ListItemText primary={FinancialTypes.MACROECONOMY} />
+        </ListItem>
+        <ListItem
+          button
           onClick={() => setSelectedComponent(FinancialTypes.TECHNICAL)}
         >
           <ListItemIcon sx={{ py: 1 }}>
@@ -39,7 +50,7 @@ const Sidebar: FC = () => {
           sx={{ py: 1 }}
         >
           <ListItemIcon>
-            <SentimentVeryDissatisfiedIcon />
+            <PsychologyIcon />
           </ListItemIcon>
           <ListItemText primary={FinancialTypes.PSYCHOLOGY} />
         </ListItem>

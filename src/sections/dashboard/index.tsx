@@ -4,6 +4,8 @@ import Technical from "./Technical";
 import Psychology from "./Phychology";
 import WorldSituation from "./WorldSituation";
 import Microeconomy from "./Microeconomy";
+import Macroeconomy from "./Macroeconomy";
+
 import { AppContext } from "../context/app/AppContext";
 import React, { useContext, FC } from "react";
 import { FinancialTypes } from "../enums/Enums";
@@ -19,14 +21,16 @@ const Dashboard: FC = () => {
 
   const renderComponent = () => {
     switch (selectedComponent) {
+      case FinancialTypes.MICROECONOMY:
+        return <Microeconomy />;
       case FinancialTypes.TECHNICAL:
         return <Technical />;
       case FinancialTypes.PSYCHOLOGY:
         return <Psychology />;
       case FinancialTypes.WORLDSITUATION:
         return <WorldSituation />;
-      case FinancialTypes.MICROECONOMY:
-        return <Microeconomy />;
+      case FinancialTypes.MACROECONOMY:
+        return <Macroeconomy />;
       default:
         return <Technical />;
     }

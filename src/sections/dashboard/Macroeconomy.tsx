@@ -1,21 +1,21 @@
 import React, { FC } from "react";
 import { Card, CardContent, Typography } from "@mui/material";
-import PsychologyIcon from "@mui/icons-material/Psychology";
+import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
 
-const Psychology: FC = () => {
+const Macroeconomy: FC = () => {
   return (
     <Card>
       <CardContent>
-        <PsychologyIcon style={{ fontSize: 40 }} />
+        <AccountBalanceIcon style={{ fontSize: 40 }} />
         <Typography variant="h5" component="div">
-          Market Psychology
+          Macroeconomy Factors
         </Typography>
         <Typography variant="body2">
-          Display Fear & Greed index information here.
+          Display information about microeconomic factors here.
         </Typography>
       </CardContent>
     </Card>
   );
 };
 
-export default Psychology;
+export default Macroeconomy;

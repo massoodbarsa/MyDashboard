@@ -6,6 +6,7 @@ import WorldSituation from "./WorldSituation";
 import Microeconomy from "./Microeconomy";
 import { AppContext } from "../context/app/AppContext";
 import React, { useContext, FC } from "react";
+import { FinancialTypes } from "../enums/Enums";
 
 const Dashboard: FC = () => {
   const context = useContext(AppContext);
@@ -18,13 +19,13 @@ const Dashboard: FC = () => {
 
   const renderComponent = () => {
     switch (selectedComponent) {
-      case "Technical":
+      case FinancialTypes.TECHNICAL:
         return <Technical />;
-      case "Psychology":
+      case FinancialTypes.PSYCHOLOGY:
         return <Psychology />;
-      case "WorldSituation":
+      case FinancialTypes.WORLDSITUATION:
         return <WorldSituation />;
-      case "Microeconomy":
+      case FinancialTypes.MICROECONOMY:
         return <Microeconomy />;
       default:
         return <Technical />;

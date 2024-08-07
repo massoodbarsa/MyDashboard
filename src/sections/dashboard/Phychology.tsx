@@ -8,7 +8,7 @@ const Psychology: FC = () => {
       <CardContent>
         <SentimentVeryDissatisfiedIcon style={{ fontSize: 40 }} />
         <Typography variant="h5" component="div">
-          Fear & Greed Index
+          Market Psychology
         </Typography>
         <Typography variant="body2">
           Display Fear & Greed index information here.

@@ -6,6 +6,7 @@ import ShowChartIcon from "@mui/icons-material/ShowChart";
 import SentimentVeryDissatisfiedIcon from "@mui/icons-material/SentimentVeryDissatisfied";
 import PublicIcon from "@mui/icons-material/Public";
 import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
+import { FinancialTypes } from "../enums/Enums";
 
 const Sidebar: FC = () => {
   const context = useContext(AppContext);
@@ -22,44 +23,47 @@ const Sidebar: FC = () => {
         component="nav"
         sx={{ display: "flex", flexDirection: "column", p: 1 }}
       >
-        <ListItem button onClick={() => setSelectedComponent("Technical")}>
+        <ListItem
+          button
+          onClick={() => setSelectedComponent(FinancialTypes.TECHNICAL)}
+        >
           <ListItemIcon sx={{ py: 1 }}>
             <ShowChartIcon />
           </ListItemIcon>
-          <ListItemText primary="Technical Analysis" />
+          <ListItemText primary={FinancialTypes.TECHNICAL} />
         </ListItem>
         {/* <Divider /> */}
         <ListItem
           button
-          onClick={() => setSelectedComponent("FearAndGreed")}
+          onClick={() => setSelectedComponent(FinancialTypes.PSYCHOLOGY)}
           sx={{ py: 1 }}
         >
           <ListItemIcon>
             <SentimentVeryDissatisfiedIcon />
           </ListItemIcon>
-          <ListItemText primary="Fear & Greed Index" />
+          <ListItemText primary={FinancialTypes.PSYCHOLOGY} />
         </ListItem>
         {/* <Divider /> */}
         <ListItem
           button
-          onClick={() => setSelectedComponent("WorldSituation")}
+          onClick={() => setSelectedComponent(FinancialTypes.WORLDSITUATION)}
           sx={{ py: 1 }}
         >
           <ListItemIcon>
             <PublicIcon />
           </ListItemIcon>
-          <ListItemText primary="World Situation" />
+          <ListItemText primary={FinancialTypes.WORLDSITUATION} />
         </ListItem>
         {/* <Divider /> */}
         <ListItem
           button
-          onClick={() => setSelectedComponent("Microeconomy")}
+          onClick={() => setSelectedComponent(FinancialTypes.MICROECONOMY)}
           sx={{ py: 1 }}
         >
           <ListItemIcon>
             <AttachMoneyIcon />
           </ListItemIcon>
-          <ListItemText primary="Microeconomic Factors" />
+          <ListItemText primary={FinancialTypes.MICROECONOMY} />
         </ListItem>
       </List>
     </div>

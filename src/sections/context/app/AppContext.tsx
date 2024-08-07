@@ -1,5 +1,5 @@
 import React, { createContext, useState, ReactNode, FC } from "react";
-import { AppContextState } from "../../types/AppCotextType";
+import { AppContextState } from "./AppCotextType";
 
 // Create the context with a default value of undefined
 export const AppContext = createContext<AppContextState | undefined>(undefined);

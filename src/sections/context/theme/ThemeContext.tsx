@@ -8,7 +8,7 @@ import { CssBaseline } from "@mui/material";
 
 import { themeSettings } from "../../../theme"; // Adjust import paths
 import React from "react";
-import { UseModeReturnType } from "../../types/ThemeContextType";
+import { UseModeReturnType } from "./ThemeContextType";
 
 interface ColorModeContextType {
   setMode: () => void;

@@ -14,7 +14,7 @@ const Topbar: FC = () => {
 
   const ColorPalette = theme.palette;
   return (
-    <Box display="flex" justifyContent="space-between" p={2}>
+    <Box display="flex" justifyContent="space-between" py={2} px={3}>
       {/* SEARCH BAR */}
       <Box
         display="flex"

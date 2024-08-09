@@ -1,10 +1,10 @@
 import { Grid } from "@mui/material";
 import Sidebar from "../global/Sidebar";
-import Technical from "./Technical";
-import Psychology from "./Phychology";
-import WorldSituation from "./WorldSituation";
-import Microeconomy from "./Microeconomy";
-import Macroeconomy from "./Macroeconomy";
+import Technical from "./technical/Technical";
+import Psychology from "./psychology/Phychology";
+import WorldSituation from "./world-situation/WorldSituation";
+import Microeconomy from "./microeconomy/Microeconomy";
+import Macroeconomy from "./macroeconomy/Macroeconomy";
 
 import { AppContext } from "../context/app/AppContext";
 import React, { useContext, FC } from "react";
